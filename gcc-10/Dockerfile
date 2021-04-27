@@ -23,5 +23,5 @@ RUN apt-get update \
   && cd ${BOOST_SRC} \
   && ./bootstrap.sh \
   && cp -r ${BOOST_SRC} ${BOOST_PY_DEPS} \
-  #&& rm -rf ${BOOST_PY_DEPS}/boost/python* \
+  && rm -rf ${BOOST_PY_DEPS}/boost/python* \
   && rm -rf ${BOOST_PY_DEPS}/libs/python*

@@ -1,2 +1,2 @@
-export BOOST_RELEASE=1.66.0
-export BOOST_RELEASE_FILE=boost_1_66_0
+export BOOST_RELEASE=1.76.0
+export BOOST_RELEASE_FILE=boost_1_76_0

@@ -24,7 +24,6 @@ RUN apt-get update \
   && mv ${release_file} ${BOOST_SRC} \
   && cd ${BOOST_SRC} \
   && ./bootstrap.sh \
-  && ./b2 tools/bcp \
-  && mkdir -p ${BOOST_PY_DEPS} \
-  && dist/bin/bcp python tools/boostbook tools/quickbook ${BOOST_PY_DEPS} \
-  && rm -rf ${BOOST_PY_DEPS}/boost/python*
+  && cp -r ${BOOST_SRC} ${BOOST_PY_DEPS} \
+  && rm -rf ${BOOST_PY_DEPS}/boost/python* \
+  && rm -rf ${BOOST_PY_DEPS}/libs/python*

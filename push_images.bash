@@ -1,6 +1,6 @@
 source boost_version.bash
 
-for compiler in clang-11 gcc-9
+for compiler in clang-12 gcc-10
 do
   docker push teeks99/boost-python-test:${compiler}
   docker push teeks99/boost-python-test:${compiler}_${BOOST_RELEASE}

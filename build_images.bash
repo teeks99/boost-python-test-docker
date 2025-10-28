@@ -3,7 +3,7 @@ set -o pipefail
 
 source boost_version.bash
 
-for compiler in clang-12 gcc-10
+for compiler in clang-21 gcc-15
 do
   pushd $compiler
   echo Building For: teeks99/boost-python-test:${compiler} with ${BOOST_RELEASE}

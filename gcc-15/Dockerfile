@@ -1,8 +1,8 @@
-FROM teeks99/boost-cpp-docker:gcc-10
+FROM teeks99/boost-cpp-docker:gcc-15
 LABEL maintainer="Thomas Kent <docker@teeks99.com>"
 
-ARG release=1.66.0
-ARG release_file=boost_1_66_0
+ARG release=1.89.0
+ARG release_file=boost_1_89_0
 ENV BOOST_PY_DEPS=/boost_py_deps
 ENV BOOST_SRC=/boost_src
 

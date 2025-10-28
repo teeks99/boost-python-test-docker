@@ -1,8 +1,8 @@
-FROM teeks99/boost-cpp-docker:clang-12
+FROM teeks99/boost-cpp-docker:clang-21
 LABEL maintainer="Thomas Kent <docker@teeks99.com>"
 
-ARG release=1.66.0
-ARG release_file=boost_1_66_0
+ARG release=1.89.0
+ARG release_file=boost_1_89_0
 ENV BOOST_PY_DEPS=/boost_py_deps
 ENV BOOST_SRC=/boost_src
 
@@ -13,7 +13,7 @@ RUN apt-get update \
     xsltproc \
     docbook-xsl \
   # Common name for clang
-  && ln -s /usr/bin/clang++-12 /usr/bin/clang++ \
+  && ln -s /usr/bin/clang++-21 /usr/bin/clang++ \
   # Get Faber for standalone builds
   && python3 -m pip install setuptools \
   && python3 -m pip install faber \

@@ -12,11 +12,9 @@ RUN apt-get update \
     python3-pip \
     xsltproc \
     docbook-xsl \
-  # Common name for clang
-  && ln -s /usr/bin/clang++-21 /usr/bin/clang++ \
+    python3-setuptools \
   # Get Faber for standalone builds
-  && python3 -m pip install setuptools \
-  && python3 -m pip install faber \
+  && python3 -m pip install --break-system-packages faber \
   # Boost Source and Needed Prereqs, remove python though
   && wget -O ${release_file}.tar.gz -nv https://sourceforge.net/projects/boost/files/boost/${release}/${release_file}.tar.gz/download \
   && tar xf ${release_file}.tar.gz \
